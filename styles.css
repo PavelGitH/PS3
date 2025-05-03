@@ -1,0 +1,581 @@
+/* Сброс отступов и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Syne', sans-serif;
+  }
+  
+  /* Главная секция */
+
+  .hero {
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Прямоугольник в центре */
+  .hero-box {
+    background-image: url('images/ps.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 80%;
+    padding: 5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 35px;
+    border-radius: 10px;
+  }
+  
+  /* Заголовок */
+  .hero-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    background-color: #000; /* серый фон под буквами */
+    color: white;
+    opacity: 0.8;
+
+  }
+  
+  /* Подзаголовок */
+  .hero-box p {
+    font-size: 1.2em;
+    opacity: 0.8;
+    background-color: #000; /* серый фон под буквами */
+    color: white;
+  }
+  
+  .double-section {
+    display: flex;
+    height: 50vh;
+    background-color: black;
+    color: white;
+  }
+  
+  .left-half,
+  .right-half {
+    width: 50%;
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-box {
+    background-color: #333;
+    width: 85%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    border-radius: 10px;
+    text-align: center;            /* центрирует текст по горизонтали */
+    font-size: 2.2rem;             /* увеличенный шрифт */
+    line-height: 1.6;              /* лучше читаемость */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* центр по вертикали */
+    align-items: center;           /* центр по горизонтали */
+    }
+  
+  .right-box {
+    background-color: #333;
+    width: 85%;
+    height: 80%;
+    margin: 10% auto;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-top: 3%;
+    text-align: left;            /* центрирует текст по горизонтали */
+    font-size: 1.2rem;   
+    padding-left: 3rem;        
+    padding-right: 3rem;
+    line-height: 1.6;              /* лучше читаемость */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* центр по вертикали */
+    align-items: center;           /* центр по горизонтали */
+  }
+  .info-section {
+    background-color: #000;
+    color: white;
+    padding: 4% 8%;
+    height: 50vh;
+  }
+  
+  .info-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info-title {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .info-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #aaa;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .info-label {
+    width: 32%;
+  }
+  
+  .info-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+  }
+  
+  .info-box {
+    width: 32%;
+    background-color: #333;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  
+  
+  .about-section {
+    background-color: #000;
+    color: white;
+    padding: 5% 0;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-areas:
+      "header photo"
+      "text text";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    background-color: #333;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .about-section {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+    height: 115vh;
+  }
+  
+  .about-title {
+    font-size: 3.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .about-grid {
+    display: grid;
+    width: 90%;
+    background-color: #333;
+    border-radius: 10px;
+    grid-template-areas:
+      "text-start photo"
+      "text-continue text-continue";
+    grid-template-rows: auto auto;
+  }
+  
+  .grid-item {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .photo {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photo img {
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .text-start {
+    grid-area: text-start;
+  }
+  
+  .text-continue {
+    grid-area: text-continue;
+  }
+
+.intro-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .intro-left, .intro-right {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .intro-left h2 {
+    font-size: 2.7rem;
+    line-height: 1.3;
+    text-align: left;  /* Выравниваем по левому краю */
+    line-height: 1.5; /* Изменение расстояния между строками */
+    padding-top: 5rem; 
+    font-family: 'Syne', sans-serif; /* Шрифт Syne для заголовка "ОМНЕ" */
+  }
+  
+  .centered-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем по высоте */
+  }
+  
+  .intro-right p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .achievements-section {
+    background-color: #000;
+    color: white;
+    padding: 5% 0;
+    text-align: center;
+    height: 115vh;
+  }
+  
+  .achievements-title {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  .achievement-card {
+    background-color: #333;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+  }
+
+  .gallery-section {
+    background-color: #000;
+    color: white;
+    padding: 5% 0;
+    text-align: center;
+    height: 140vh;
+  }
+  
+  .gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+  }
+  
+  .gallery-wrapper {
+    background-color: #333;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* делает фото квадратными */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .split-section {
+    background-color: #000;
+    height: 80vh; /* увеличим до 100% экрана, чтобы всё влезло */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Центральный прямоугольник */
+  .center-rectangle {
+    width: 90%;
+    height: 50vh;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 10px;
+
+  }
+  
+  /* Левая часть */
+  .left-part {
+    /* Вместо цвета */
+    background-image: url('images/trening2.jpg'); /* ← сюда вставь путь к своему изображению */
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+
+  }
+  
+  /* Правая часть */
+  .right-part {
+    background-color: #fff;
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+
+  }
+  
+  /* Черный прямоугольник */
+  .black-box {
+    position: absolute;
+    right: 5%;
+    bottom: 10%; /* Сделаем побольше, чтобы точно не слился с нижним краем */
+    width: 55%;
+    height: 65%;
+    background-color: #333;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+    color: white;
+    border-radius: 10px;
+
+  }
+
+  .black-box h2 {
+    margin: 0 0 10px;
+    font-size: 3rem;
+    font-family: 'Syne', sans-serif; /* Шрифт Syne для заголовка */
+    margin-bottom: 2.6rem;
+  }
+  
+  .black-box p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+
+
+/* Кнопка */
+.black-button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #666;
+    padding: 10px 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 10px;
+
+  }
+  
+  .black-button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Секция */
+ .media-section {
+    background-color: #000;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*  прямоугольник */
+  .media-box {
+    background-color: #333;
+    width: 90%;
+    height: 70%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+
+  }
+  
+  /* Заголовок */
+  .media-title {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  /* Подзаголовок */
+  .media-subtitle {
+    color: white;
+    font-size: 1rem;
+    margin: 10px 0 20px;
+    text-align: center;
+  }
+  
+  /* Кнопки */
+  .media-buttons {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .media-buttons button {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #666;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 300px;
+    border-radius: 10px;
+
+  }
+  
+  .media-buttons button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+
+  /* Секция */
+ .contact-section {
+    background-color: #000;
+    height: 75vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  
+  /* Чёрный блок */
+  .contact-box {
+    background-color: #333;
+    width: 100%;
+    height: 83%;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+
+  }
+  
+  /* Заголовок и подзаголовок */
+  .contact-title {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-subtitle {
+    margin: 10px 0 30px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Контактная информация */
+  .contact-info {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-align: center;
+
+  }
+  
+  /* Форма */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    background-color: #222;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    border-radius: 10px;
+
+  }
+  
+  .contact-form textarea {
+    min-height: 100px;
+  }
+  
+  .contact-form button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+
+  }
+  
+  .contact-form button:hover {
+    background-color: #ccc;
+  }
