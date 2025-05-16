@@ -579,3 +579,19 @@
   .contact-form button:hover {
     background-color: #ccc;
   }
+
+/* Адаптация под узкие экраны */
+@media (min-width: 768px) {
+  .double-section .left-half,
+  .double-section .right-half {
+    flex: 1 1 50%;
+  }
+
+  .info-box {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+
+  .grid-item.text-continue {
+    flex-basis: 100%;
+  }
+}
