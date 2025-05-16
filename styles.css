@@ -580,18 +580,195 @@
     background-color: #ccc;
   }
 
-/* Адаптация под узкие экраны */
-@media (min-width: 768px) {
-  .double-section .left-half,
-  .double-section .right-half {
-    flex: 1 1 50%;
+/* ——————————— 📱 Мобильная адаптация ——————————— */
+@media (max-width: 768px) {
+
+  .hero {
+    height: auto;
+    padding: 2rem 0;
   }
 
+  .hero-box {
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+    height: auto;
+  }
+
+  .hero-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-box p {
+    font-size: 1rem;
+  }
+
+  .double-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-half,
+  .right-half {
+    width: 100%;
+    margin: 0;
+  }
+
+  .left-box,
+  .right-box {
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .info-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .info-labels,
+  .info-boxes {
+    flex-direction: column;
+  }
+
+  .info-label,
   .info-box {
-    flex: 1 1 calc(33.333% - 1rem);
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .grid-item.text-continue {
-    flex-basis: 100%;
+  .info-title {
+    font-size: 2rem;
+  }
+
+  .about-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-grid {
+    display: block;
+    padding: 1rem;
+  }
+
+  .photo {
+    margin-bottom: 1rem;
+  }
+
+  .intro-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .intro-left h2 {
+    font-size: 1.8rem;
+    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .intro-right p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .achievements-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .achievements-title {
+    font-size: 2rem;
+  }
+
+  .gallery-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-title {
+    font-size: 2rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 1rem;
+  }
+
+  .split-section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .center-rectangle {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-part,
+  .right-part {
+    width: 100%;
+    height: 200px;
+  }
+
+  .black-box {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+  }
+
+  .black-box h2 {
+    font-size: 2rem;
+  }
+
+  .media-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .media-box {
+    padding: 1rem;
+  }
+
+  .media-title {
+    font-size: 1.5rem;
+  }
+
+  .media-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .media-buttons button {
+    width: 100%;
+  }
+
+  .contact-section {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .contact-box {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
   }
 }
+
