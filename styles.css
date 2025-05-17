@@ -607,19 +607,8 @@
     height: auto;
   }
 
-  .left-half,
-  .right-half {
-    width: 100%;
-    margin: 0;
-  }
-
-  .left-box,
-  .right-box {
-    width: 90%;
-    height: auto;
-    margin: 1rem auto;
-    font-size: 1.2rem;
-    padding: 1rem;
+  .hide-on-mobile {
+    display: none;
   }
 
   .info-section {
