@@ -608,7 +608,13 @@
   }
 
   .hide-on-mobile {
-    display: none;
+    /* Вместо цвета */
+    background-image: url('images/trening2.jpg'); /* ← сюда вставь путь к своему изображению */
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
   }
 
   .info-section {
